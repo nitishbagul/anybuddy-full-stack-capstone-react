@@ -7,9 +7,9 @@ import {
 
 // import '../assets/css/main.css';
 
-import Header from '../js/components/header';
+import HeaderHomepage from '../js/components/header-homepage';
 
 document.addEventListener('DOMContentLoaded', () => {
-    return ReactDOM.render( < Header / > ,
-        document.getElementById('reactHeader'));
+    return ReactDOM.render( <HeaderHomepage /> ,
+        document.getElementById('reactHeaderHomepage'));
 });

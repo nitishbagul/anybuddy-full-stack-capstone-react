@@ -29,7 +29,7 @@ Joined Events
 ![Wireframe _Main](https://github.com/nitishbagul/anybuddy-full-stack-capstone/blob/master/github-images/wireframes.jpg)
 
 ## Working Prototype
-You can find a Node.js working prototype of the app here: https://anybuddy-full-stack-capstone.herokuapp.com/ and React prototype here:
+You can find a Node.js working prototype of the app here: https://anybuddy-full-stack-capstone.herokuapp.com/ and React prototype here: https://nitishbagul.github.io/anybuddy-full-stack-capstone-react/build
 
 ## Functionality
 The app's functionality includes:

@@ -56,9 +56,9 @@
 	
 	var _reactRedux = __webpack_require__(17);
 	
-	var _header = __webpack_require__(49);
+	var _headerHomepage = __webpack_require__(49);
 	
-	var _header2 = _interopRequireDefault(_header);
+	var _headerHomepage2 = _interopRequireDefault(_headerHomepage);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -67,7 +67,7 @@
 	// import '../assets/css/main.css';
 	
 	document.addEventListener('DOMContentLoaded', function () {
-	    return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
+	    return _reactDom2.default.render(_react2.default.createElement(_headerHomepage2.default, null), document.getElementById('reactHeaderHomepage'));
 	});
 
 /***/ }),
@@ -24164,7 +24164,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.default = Header;
+	exports.default = HeaderHomepage;
 	
 	__webpack_require__(50);
 	
@@ -24190,32 +24190,16 @@
 	    adapter: new _enzymeAdapterReact2.default()
 	});
 	
-	function Header(props) {
+	function HeaderHomepage(props) {
 	    return _react2.default.createElement(
 	        'header',
-	        null,
+	        { className: 'title-container', role: 'banner' },
 	        _react2.default.createElement(
 	            'h1',
 	            null,
-	            ' Not Just Luck '
+	            'AnyBuddy'
 	        ),
-	        ' ',
-	        _react2.default.createElement(
-	            'a',
-	            { href: '#',
-	                id: 'js-signin-link',
-	                alt: 'Sign In' },
-	            ' Sign In '
-	        ),
-	        ' ',
-	        _react2.default.createElement(
-	            'a',
-	            { href: '#',
-	                id: 'js-signout-link',
-	                alt: 'Sign Out' },
-	            ' Sign Out '
-	        ),
-	        ' '
+	        _react2.default.createElement('input', { type: 'hidden', id: 'loggedInUserId', 'data-lat': '', 'data-lng': '', value: '' })
 	    );
 	}
 
