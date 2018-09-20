@@ -1,0 +1,765 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+/* Styles for Welcome Page */
+
+body,
+html {
+    height: 100%;
+    min-height: 100vh;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.fa-handshake:before {
+    content: "\f2b5";
+    color: white;
+    font-size: 35px;
+    margin-left: 15px;
+}
+
+/*f3c5*/
+
+.demoMessage {
+    position: fixed;
+    top: 0px;
+    left: 35%;
+    background-color: #ffce00;
+    color: #2c3531;
+    padding: 10px 5%;
+    width: 30%;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.demoMessage span,
+.demoMessage a {
+    color: #2c3531;
+}
+
+.demoMessage a {
+    cursor: pointer;
+    color: #0375B4;
+}
+
+/*Welcome Page Style*/
+
+.welcome-page {
+    background: url("https://hikeandcycle.com/wp-content/uploads/2017/07/hikingbuddys-800x533.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+}
+
+
+.welcome-page h1 {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.30);
+    color: white;
+    font-size: 50px;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+    padding: 7px 7px;
+    line-height: 31.5px;
+}
+
+.info-screen {
+    width: 500px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    margin-right: 72px;
+    margin-top: 40px;
+    padding: 33px;
+    text-align: left;
+    float: right;
+    content: "";
+    clear: both;
+    display: table;
+}
+
+button {
+    background-color: #89cf56;
+    padding-left: 2px;
+    padding-right: 2px;
+    /* padding: 6px 8px 6px 8px; */
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+    /* color: black; */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#logInButton {
+    width: 100%;
+    height: 46px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #4CAF50;
+    font-size: 24px;
+    font-weight: 400;
+    border: 2px solid #b3a7a7;
+}
+
+
+.register-link {
+    font-family: 'aglet-slab', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000000;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 30px;
+    cursor: pointer;
+    display: block;
+}
+
+.login-form fieldset,
+.register-form fieldset,
+.create-event-form fieldset,
+.edit-event-form fieldset,
+.request-join-form fieldset {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 100%;
+    border: none;
+}
+
+.login-form fieldset input,
+.register-form fieldset input,
+.create-event-form fieldset input,
+.edit-event-form fieldset input,
+.request-join-form fieldset input {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 55px;
+    border: 2px solid #c4c6c5;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.log-in-button,
+.register-button,
+.create-event-button {
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 50px;
+    height: 55px;
+    background-color: #35ce59;
+    text-decoration-color: white;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.login-form h2,
+.login-form h4,
+.register-form h2,
+.register-form h4,
+.create-event-form h2,
+.edit-event-form h2,
+.create-event-form h4 {
+    margin: auto;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 200;
+    color: black;
+}
+
+/*Menu Page Styles*/
+
+.menu-page,
+body {
+    background-color: #EBF7E3;
+}
+
+.my-events-page {
+    text-align: center;
+}
+
+/*
+.topnav {
+    overflow: hidden;
+    background-color: #59992b;
+    line-height: 90px;
+    width: 100%;
+    padding: 5px;
+}
+*/
+
+.topnav {
+    /*    background: url("http://www.cashadvance6online.com/data/archive/img/3036912826.jpeg") no-repeat center center fixed;*/
+    background: url("assets/header-image.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    width: unset;
+    background-position: center;
+}
+
+.icon {
+    display: inline-block;
+}
+
+.logo-text {
+    color: white;
+    /*margin-left: 15px;
+*/
+    display: inline-block;
+}
+
+.nav-logo {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    padding: 3px 5px;
+}
+
+.nav-list {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    padding: 3px 5px;
+    float: right;
+    margin-top: 19px;
+}
+
+.nav-logo h2 {
+    font-size: 26px;
+    color: #FEFEFE;
+    font-family: Tahoma, Geneva, sans-serif;
+    margin-left: 10px;
+}
+
+.nav-list button {
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    color: white;
+    font-size: 19px;
+    font-weight: 200;
+}
+
+.nav-list span {
+    color: #f2f2f2;
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 5px;
+}
+
+/*
+.nearby-events-button:before {
+    content: '\f3c5';
+    color: black;
+    font-size: 20px;
+}
+*/
+
+.subnav {
+    background-color: #9bd770;
+    text-align: center;
+    font-size: 0;
+}
+
+.subnav button {
+    display: inline-block;
+    background-color: #9bd770;
+    color: white;
+    height: 50px;
+    width: 50%;
+    margin: 0;
+    border-radius: 0;
+    font-size: 20px;
+}
+
+
+.subnav button:hover {
+    color: green;
+}
+
+
+.js-menu-button {
+    background-color: #75d138 !important;
+}
+
+/**** Main Content Styles ****/
+
+.map,
+.events-list-container {
+    border: solid 1px #444;
+}
+
+
+.events-list-container {
+    width: 28.8%;
+    height: 1000px;
+    display: inline-block;
+    overflow-y: auto;
+}
+
+.map {
+    width: 69.7%;
+    height: 1000px;
+    display: inline-block;
+    /* margin-top: -2px; */
+    vertical-align: top;
+}
+
+.events-list {
+    padding: 10px 0 10px 5px;
+    list-style: none;
+}
+
+.events-list li {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.events-list li * {
+    margin-bottom: 17px;
+    font-weight: 400;
+}
+
+.filter-events-container {
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 100px;
+}
+
+.new-event-button {
+    width: 200px;
+    display: inline-block;
+}
+
+.my-events-list-container {
+    margin-top: 50px;
+}
+
+.creator-single-event-display,
+.partner-single-event-display {
+    border: 2px solid grey;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    background-color: #9BD770;
+}
+
+.single-event-info {
+    text-align: left;
+}
+
+.creator-single-event-display h3,
+.partner-single-event-display h3 {
+    padding-bottom: 5px;
+    margin-top: 3px;
+    font-size: 22px;
+    color: darkslategrey;
+}
+
+.creator-single-event-display *,
+.partner-single-event-display * {
+    margin-bottom: 5px;
+}
+
+.creator-single-event-display p,
+.partner-single-event-display p {
+    padding: 0;
+}
+
+.my-events-list-container ul {
+    list-style: none;
+}
+
+.filter-events {
+    font-size: 18px;
+}
+
+.filter-events-container-label {
+    font-size: 20px;
+    color: #4a7f24;
+}
+
+.delete-event-container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #4a7f24;
+    background-color: #EBF7E3;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.delete-event-container * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.delete-event-button {
+    width: 30%;
+    background-color: #4a7f24;
+}
+
+element.style {
+    height: 30px;
+    width: 150px;
+}
+
+.create-event-button,
+.save-event-button {
+    background-color: #375F1B;
+}
+
+.save-event-button {
+    width: 80%;
+}
+
+.create-event-container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.edit-event-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.create-event-form,
+.edit-event-form {
+    border: 1px solid grey;
+    padding: 5px 5px;
+    background-color: #9BD770;
+}
+
+.edit-event-form {
+    border: none;
+}
+
+.event-update-buttons,
+.approval-buttons {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    padding: 3px 5px;
+    float: right;
+    margin-right: 10px;
+    font-size: 21px;
+}
+
+.approval-buttons {
+    float: none;
+    color: #375F1B;
+}
+
+.event-update-buttons button,
+.approval-buttons button {
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+    color: darkgreen;
+    font-size: 19px;
+    font-weight: 200;
+    height: auto;
+    width: auto;
+}
+
+.collapse-button {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.collapsible {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #4a7f24;
+    color: white;
+}
+
+.collapse-content {
+    padding: 0 5px;
+    display: none;
+    overflow: hidden;
+    background-color: #EBF7E3;
+}
+
+.contact-collapse {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    background-color: #afdf8c;
+    color: #375F1B;
+}
+
+.event-content {
+    height: auto;
+    padding: 10px 10px;
+}
+
+.event-joining p {
+    color: #375F1B
+}
+
+.request-joining-button {
+    width: 100%;
+    height: 55px;
+}
+
+/*Footer Styles*/
+
+footer {
+    background-color: #EBF7E3
+}
+
+footer ul {
+    width: 50%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+footer li {
+    display: inline-block;
+    width: auto;
+    color: #4a7f24;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer a {
+    color: #4a7f24;
+    font-size: 120%;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: grey;
+}
+
+/*Media Queries*/
+
+/*ipad landscape / small laptop*/
+
+@media only screen and (max-width: 1024px) {}
+
+
+/*ipad potrait*/
+
+@media only screen and (max-width: 768px) {
+
+    .map {
+        display: block;
+        width: 100%;
+    }
+
+    .events-list-container {
+        display: block;
+        width: 100%;
+    }
+
+    .filter-events-container {
+        display: block;
+        margin-right: 0px;
+    }
+
+    .new-event-button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+
+    .creator-single-event-display,
+    .partner-single-event-display {
+        width: 90%;
+    }
+
+    .info-screen {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        margin-top: 40px;
+        padding: 30px;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        float: none;
+    }
+
+    .log-in-container,
+    .register-container {
+        width: 75%;
+
+    }
+
+
+    .login-form h2,
+    .login-form h4,
+    .register-form h2,
+    .register-form h4 {
+        font-size: 22px;
+
+    }
+
+
+}
+
+
+/*iPhone landscape*/
+
+@media only screen and (max-width: 480px) {
+
+    .delete-event-container {
+        width: 90%;
+    }
+
+    .single-event-display {
+        width: 90%;
+    }
+
+    .collapse-button,
+    .contact-collapse {
+        width: 100%;
+    }
+
+    .event-update-buttons {
+        float: none;
+    }
+
+    .info-screen {
+        width: 90%;
+    }
+
+    #loginUserName,
+    #loginPassword,
+    #registerEmail,
+    #registerUserName,
+    registerPassword {
+        width: 100%;
+    }
+
+    .login-form h2,
+    .login-form h4,
+    .register-form h2,
+    .register-form h4 {
+        font-size: 21px;
+    }
+
+    .log-in-container button,
+    .register-container button {
+        width: 100%;
+    }
+    .log-in-container,
+    .register-container,
+    .all-forms-container {
+        width: 90%;
+    }
+
+    .create-event-container,
+    .edit-event-container {
+        width: 90%;
+    }
+
+    .subnav button {
+        display: inline-block;
+        height: auto;
+        padding: 10px 15px;
+        width: 100%;
+        border-top: 1px solid brown;
+        border-bottom: brown;
+    }
+
+    .nav-logo,
+    .nav-list {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .nav-list {
+        float: none;
+        margin-right: -36px;
+    }
+
+    .logo-text {
+        font-size: 23px;
+    }
+
+    .nav-list span {
+        font-size: 17px;
+    }
+    .nav-list button {
+        font-size: 18px;
+    }
+
+}
+
+/*iPhone portrait*/
+
+@media only screen and (max-width: 320px) {
+    .welcome-page {
+        height: 1988px;
+    }
+    .info-screen {
+        width: 80%;
+
+    }
+}

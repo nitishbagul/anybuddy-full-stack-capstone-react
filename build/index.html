@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AnyBuddy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Find buddies to make that activity a fun">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+
+<body>
+    <div id="messageBox" class="demoMessage">
+        <span>Loading ...</span>
+        <!--            <button id="hideBtn">X</button>-->
+    </div>
+    <main class="welcome-page" role="main">
+        <header class="title-container" role="banner">
+            <h1>AnyBuddy</h1>
+            <input type="hidden" id="loggedInUserId" data-lat="" data-lng="" value="">
+        </header>
+
+        <div class="info-screen clearfix">
+            <section class="info-text">
+                <p>Need a buddy to play chess? Want someone to accompany you on the beautiful but strenuous hike? Looking for someone to workout with in the gym?</p>
+                <p>We get you.</p>
+                <p>AnyBuddy is user friendly and completely free app that lets you post activities and events for which you need a partner and allows others to join your activity. Register now and find the like minded buddies with one click.</p>
+
+                <button role="button" id="logInButton">
+            Log In
+              </button>
+            </section>
+            <section class="log-in-container">
+                <form class="login-form">
+                    <h2 class="log-in-text">Log in</h2>
+                    <fieldset name="user-info" class="user-info">
+
+                        <label for="loginUserName">Username</label>
+                        <input role="textbox" type="text" name="username" id="loginUserName" value="testuser" required>
+
+                        <label for="loginPassword">Password</label>
+                        <input role="textbox" type="password" name="pwd" id="loginPassword" value="testuser" required>
+
+                        <button role="button" type="submit" class="log-in-button">Log In</button>
+
+                    </fieldset>
+                </form>
+            </section>
+            <a href="#" class="register-link">
+                Don't have an account? Register
+            </a>
+
+            <section class="register-container">
+                <form class="register-form">
+                    <h2 class="register-text">Register</h2>
+                    <fieldset name="user-info" class="user-info">
+
+                        <label for="registerEmail">Email</label>
+                        <input role="textbox" placeholder="foo@bar.com" type="email" name="email" id="registerEmail" value="demouser@dhefghef.com" required>
+
+                        <label for="registerUserName">Username</label>
+                        <input role="textbox" type="text" name="username" id="registerUserName" value="demouser" required>
+
+                        <label for="registerPassword">Password</label>
+                        <input role="textbox" type="password" name="pwd" id="registerPassword" value="demouser" required>
+
+                        <button role="button" type="submit" class="register-button">Register</button>
+
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+
+    </main>
+
+    <main class="menu-page" role="main">
+        <header role="banner">
+            <div class="topnav">
+                <div class="nav-logo">
+                    <i class="fas fa-handshake icon"></i>
+                    <h1 class="logo-text">AnyBuddy</h1>
+                </div>
+                <div class="nav-list">
+                    <span class="username">Nitish</span>
+                    <span>|</span>
+                    <span><button class="logout-button">Logout</button></span>
+                </div>
+            </div>
+
+            <div class="subnav">
+                <button class="nearby-events-button js-menu-button"><i class="fas fa-map-marker-alt"></i>  EVENTS NEAR ME</button>
+                <button class="my-events-button"><i class="fas fa-map-pin"></i>  MY EVENTS</button>
+            </div>
+        </header>
+
+        <section class="nearby-events-page">
+            <div class="nearby-events-main-content">
+                <div class="map" id="map">
+                </div>
+                <div class="events-list-container">
+                    <ul class="events-list" id="listings">
+                        <!--
+                        <li>
+                            <div class="event-content collapsible">
+                                <h3 class="event-header">Play Chess</h3>
+                                <h4 class="event-date">Aug 30, 2018 8PM</h4>
+                                <h5 class="event-address">2147 Newhall Street, Santa Clara</h5>
+                            </div>
+                            <div class="event-joining collapse-content">
+                                <p>Partners Required: <span class="required-partners">1</span></p>
+                                <button class="join-event-button">Join Event</button>
+                                <div class="request-join-details">
+                                    <form class="request-join-form">
+                                        <fieldset name="contact-info" class="contact-info">
+
+                                            <label for="contactName">Name</label>
+                                            <input role="textbox" type="text" name="contactName" id="partnerName" required>
+
+                                            <label for="contactEmail">Email</label>
+                                            <input role="textbox" placeholder="foo@bar.com" type="email" name="contactemail" id="partnerEmail" required>
+
+                                            <label for="contactNumber">Phone</label>
+                                            <input role="textbox" type="tel" name="contactnumber" id="partnerPhone" required>
+
+                                            <button role="button" type="submit" class="request-joining-button">Join</button>
+
+                                        </fieldset>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-content collapsible">
+                                <h3 class="event-header">Hiking</h3>
+                                <h4 class="event-date">Aug 30, 2018 8PM</h4>
+                                <h5 class="event-address">Montebello Open Space Preserve, Saratoga</h5>
+                            </div>
+                            <div class="event-joining collapse-content">
+                                <p>Partners Required: <span class="required-partners">2</span></p>
+                                <button class="join-event-button">Join</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-content collapsible">
+                                <h3 class="event-header">Python Pair Programming</h3>
+                                <h4 class="event-date">Aug 30, 2018 8PM</h4>
+                                <h5 class="event-address">355 N Wolfe Rd, Sunnyvale</h5>
+                            </div>
+                            <div class="event-joining collapse-content">
+                                <p>Partners Required: <span class="required-partners">3</span></p>
+                                <button class="join-event-button">Join</button>
+                            </div>
+                        </li>
+-->
+                    </ul>
+                    <p style="display: none;" type="hidden" class="no-events-text">No Events to show near you.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-events-page">
+            <div class="my-events-main-content">
+                <!--<h2>My Events</h2>-->
+                <p class="no-events-text">No events found.</p>
+                <div class="filter-events-container">
+                    <label for="event-type-selection">Filter Events</label>
+                    <select class="filter-events">
+                    <option value="0">Created By Me</option>
+                    <option value="1">Joined By Me</option>
+                </select>
+                </div>
+                <button class="new-event-button">+ Create New</button>
+
+                <div class="create-event-container">
+                    <form class="create-event-form">
+                        <h2 class="event-details-text">Event Details</h2>
+                        <fieldset name="event-info" class="event-info">
+
+                            <label for="eventTitle">Event Title</label>
+                            <input role="textbox" type="text" name="title" id="eventTitle" value="Play Tennis" required>
+
+                            <label for="eventDate">Date</label>
+                            <input type="date" name="date" id="eventDate" value="2018-09-09" required>
+
+                            <label for="eventTime">Time</label>
+                            <input type="time" name="time" id="eventTime" value="14:00:00" required>
+
+                            <label for="eventStreetAddress">Street Address</label>
+                            <input role="textbox" type="text" name="street" id="eventStreetAddress" class="autocomplete street_number route" value="2147 Newhall Street" onFocus="geolocate()" required>
+
+                            <label for="eventCity">City</label>
+                            <input role="textbox" type="text" name="city" id="eventCity" class="locality" value="Santa Clara" required>
+
+                            <label for="eventState">State</label>
+                            <input role="textbox" type="text" name="state" id="eventState" class="administrative_area_level_1" value="California" required>
+
+                            <label for="eventZipCode">Zip Code</label>
+                            <input role="textbox" type="number" name="zip" id="eventZipCode" class="postal_code" value="95050" required>
+
+                            <label for="eventCountry">Country</label>
+                            <input role="textbox" type="text" name="country" id="eventCountry" class="country" value="United States" required>
+
+                            <label for="requiredPartners">Partners Required</label>
+                            <input role="textbox" type="text" name="partnerNumber" id="requiredPartners" class="partnerNumber" value="2" required>
+
+                        </fieldset>
+
+                        <h2 class="contact-details-text">Contact Details</h2>
+                        <fieldset name="contact-info" class="contact-info">
+
+                            <label for="contactName">Name</label>
+                            <input role="textbox" type="text" name="contactName" id="contactName" value="John Snow" required>
+
+                            <label for="contactEmail">Email</label>
+                            <input role="textbox" placeholder="foo@bar.com" type="email" name="contactemail" id="contactEmail" value="jsnow@gmail.com" required>
+
+                            <label for="contactNumber">Phone</label>
+                            <input role="textbox" type="tel" name="contactnumber" id="contactNumber" value="667-787-8876" required>
+
+                        </fieldset>
+
+                        <button role="button" type="submit" class="create-event-button">Create</button>
+                    </form>
+                </div>
+
+                <div class="my-events-list-container">
+                    <div class="self-view-display">
+                        <ul class="self-view-display-list">
+
+                            <!--
+<li class="creator-single-event-display">
+    <div class="event-update-buttons">
+        <button class="edit-event-button">Edit</button>
+        <span>|</span>
+        <button class="delete-event-button">Delete</button>
+    </div>
+    <div class="single-event-info">
+        <h3>Game of Chess</h3>
+        <h4>Date</h4>
+        <p>Aug 30, 2018 10PM</p>
+        <h4>Location</h4>
+        <p>2147 Newhall Street, Santa Clara, CA-94085</p>
+        <h4>Status</h4>
+        <p>Pending approval</p>
+    </div>
+
+    <div class="collapse-button">
+        <button class="collapsible">My Partners</button>
+        <ul class="collapse-content">
+            <li>
+                <button class="collapsible contact-collapse">John Snow</button>
+                <div class="collapse-content contact-collapse-content">
+                    <p>Email: <span>johnsnow@gmail.com</span></p>
+                    <p>Phone: <span>778-887-7777</span></p>
+                    <div class="approval-buttons">
+                        <button class="accept-button">Accept</button>
+                        <span>|</span>
+                        <button class="reject-button">Reject</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button class="collapsible contact-collapse">Rob Stark</button>
+                <div class="collapse-content contact-collapse-content">
+                    <p>Email: <span>robstark@yahoo.com</span></p>
+                    <p>Phone: <span>887-999-6666</span></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="edit-event-container">
+        <form class="edit-event-form">
+            <h2 class="event-details-text">Edit Event</h2>
+            <fieldset name="event-info" class="event-info">
+
+                <label for="eventTitle">Event Title</label>
+                <input role="textbox" type="text" name="title" class="editEventTitle" value="Play Tennis" required="">
+
+                <label for="eventDate">Date</label>
+                <input type="date" name="date" class="editEventDate" value="" required="">
+
+                <label for="eventTime">Time</label>
+                <input type="time" name="time" class="editEventTime" value="" required="">
+
+            </fieldset>
+
+            <button role="button" type="submit" class="save-event-button">Save</button>
+        </form>
+    </div>
+
+    <div class="delete-event-container">
+        <p>Removing <span class="delete-event-name">Game Of Chess</span></p>
+        <p>The event will be permanently deleted.</p>
+        <button role="button" class="delete-event-button">Delete</button>
+    </div>
+</li>
+-->
+
+                        </ul>
+
+
+                    </div>
+
+
+                    <div class="others-view-display">
+                        <ul class="others-view-display-list">
+                            <!--
+<li class="partner-single-event-display">
+    <div class="event-update-buttons">
+        <button class="delete-event-button">Delete</button>
+    </div>
+    <div class="single-event-info">
+        <h3>Hiking</h3>
+        <h4>Date</h4>
+        <p>Sep 15, 2018 7AM</p>
+        <h4>Location</h4>
+        <p>Montebello Open Space Preserve, Saratoga, CA-94085</p>
+        <h4>Status</h4>
+        <p>Pending approval</p>
+    </div>
+
+    <div class="collapse-button">
+        <button class="collapsible">My Partners</button>
+        <div class="collapse-content">
+            <button class="collapsible contact-collapse">Capatain Morgan</button>
+            <div class="collapse-content contact-collapse-content">
+                <p>Email: <span>captainmorgan@gmail.com</span></p>
+                <p>Phone: <span>778-887-7777</span></p>
+            </div>
+            <button class="collapsible contact-collapse">Jack Daniels</button>
+            <div class="collapse-content contact-collapse-content">
+                <p>Email: <span>jackd@yahoo.com</span></p>
+                <p>Phone: <span>887-999-6666</span></p>
+            </div>
+        </div>
+    </div>
+</li>
+-->
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <ul>
+            <li class="icon">
+                <a href="https://www.linkedin.com/in/nitishbagul/" target="blank">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="block">Linkedin</span>
+                </a>
+            </li>
+            <li class="icon">
+                <a href="https://github.com/nitishbagul" target="blank">
+                    <i class="fab fa-github-square"></i>
+                    <span class="block">Github</span>
+                </a>
+            </li>
+            <li class="icon">
+                <a href="mailto:nitishbagul@gmail.com" target="blank">
+                    <i class="far fa-envelope"></i>
+                    <span class="block">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY5Mo1gHwOkP3SgAVQwrlCOP_lVVvtJDg&libraries=places&callback=initMap" async defer></script>
+    <!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY5Mo1gHwOkP3SgAVQwrlCOP_lVVvtJDg&libraries=places&callback=initAutocomplete" async defer></script>-->
+    <script src="assets/client.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
