@@ -5,10 +5,10 @@ import {
     render
 } from 'enzyme';
 
-import Header from './header';
+import HeaderHomepage from './header-homepage';
 
-describe('<Header />', () => {
+describe('<HeaderHomepage />', () => {
     it('Renders without crashing', () => {
-        shallow( < Header / > );
+        shallow(<HeaderHomepage />);
     });
 });

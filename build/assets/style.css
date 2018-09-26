@@ -223,19 +223,9 @@ body {
     text-align: center;
 }
 
-/*
-.topnav {
-    overflow: hidden;
-    background-color: #59992b;
-    line-height: 90px;
-    width: 100%;
-    padding: 5px;
-}
-*/
 
 .topnav {
-    /*    background: url("http://www.cashadvance6online.com/data/archive/img/3036912826.jpeg") no-repeat center center fixed;*/
-    background: url("assets/header-image.jpg") no-repeat center center fixed;
+    background: url("images/header-image.jpg") no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     width: unset;

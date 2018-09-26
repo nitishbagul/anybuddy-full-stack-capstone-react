@@ -60,6 +60,10 @@
 	
 	var _headerHomepage2 = _interopRequireDefault(_headerHomepage);
 	
+	var _headerMainpage = __webpack_require__(536);
+	
+	var _headerMainpage2 = _interopRequireDefault(_headerMainpage);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var render = _reactDom2.default.render;
@@ -68,6 +72,10 @@
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	    return _reactDom2.default.render(_react2.default.createElement(_headerHomepage2.default, null), document.getElementById('reactHeaderHomepage'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	    return _reactDom2.default.render(_react2.default.createElement(_headerMainpage2.default, null), document.getElementById('reactHeaderMainpage'));
 	});
 
 /***/ }),
@@ -72690,6 +72698,101 @@
 	  return detectFiberTags;
 	}();
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ }),
+/* 536 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = HeaderMainpage;
+	
+	__webpack_require__(50);
+	
+	__webpack_require__(118);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(8);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(120);
+	
+	var _enzymeAdapterReact = __webpack_require__(516);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({
+	    adapter: new _enzymeAdapterReact2.default()
+	});
+	
+	function HeaderMainpage(props) {
+	    return _react2.default.createElement(
+	        'header',
+	        { role: 'banner' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'topnav' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'nav-logo' },
+	                _react2.default.createElement('i', { className: 'fas fa-handshake icon' }),
+	                _react2.default.createElement(
+	                    'h1',
+	                    { className: 'logo-text' },
+	                    'AnyBuddy'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'nav-list' },
+	                _react2.default.createElement(
+	                    'span',
+	                    { className: 'username' },
+	                    'Nitish'
+	                ),
+	                _react2.default.createElement(
+	                    'span',
+	                    null,
+	                    '|'
+	                ),
+	                _react2.default.createElement(
+	                    'span',
+	                    null,
+	                    _react2.default.createElement(
+	                        'button',
+	                        { className: 'logout-button' },
+	                        'Logout'
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'subnav' },
+	            _react2.default.createElement(
+	                'button',
+	                { className: 'nearby-events-button js-menu-button' },
+	                _react2.default.createElement('i', { className: 'fas fa-map-marker-alt' }),
+	                '  EVENTS NEAR ME'
+	            ),
+	            _react2.default.createElement(
+	                'button',
+	                { className: 'my-events-button' },
+	                _react2.default.createElement('i', { className: 'fas fa-map-pin' }),
+	                '  MY EVENTS'
+	            )
+	        )
+	    );
+	}
 
 /***/ })
 /******/ ]);
