@@ -1,6 +1,9 @@
 {
     "name": "anybuddy-full-stack-capstone",
     "version": "1.0.0",
+    "engines": {
+        "node": "18.x"
+    },
     "description": "Anybuddy lets you create events and helps you find like minded buddies",
     "main": "js/index.js",
     "dependencies": {
