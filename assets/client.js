@@ -223,7 +223,7 @@ function showEventsNearUser(userLat, userLng) {
     //make the api call to get all events based on GPS
     $.ajax({
             type: 'GET',
-            url: 'https://anybuddy-full-stack-capstone.herokuapp.com/events/get/' + userLat + '/' + userLng,
+            url: 'https://anybuddy-backend.onrender.com/events/get/' + userLat + '/' + userLng,
             dataType: 'json',
             contentType: 'application/json'
         })
@@ -319,7 +319,7 @@ function reducePartnersRequiredCount(eventId, partnersRequired) {
     };
     $.ajax({
             type: 'PUT',
-            url: `https://anybuddy-full-stack-capstone.herokuapp.com/event/${eventId}`,
+            url: `https://anybuddy-backend.onrender.com/event/${eventId}`,
             dataType: 'json',
             data: JSON.stringify(newEventObject),
             contentType: 'application/json'
@@ -345,7 +345,7 @@ function increasePartnersRequiredCount(eventId, partnersRequired) {
     };
     $.ajax({
             type: 'PUT',
-            url: `https://anybuddy-full-stack-capstone.herokuapp.com/event/${eventId}`,
+            url: `https://anybuddy-backend.onrender.com/event/${eventId}`,
             dataType: 'json',
             data: JSON.stringify(newEventObject),
             contentType: 'application/json'
@@ -365,7 +365,7 @@ function increasePartnersRequiredCount(eventId, partnersRequired) {
 function showMyOwnEvents(userId) {
     $.ajax({
             type: 'GET',
-            url: `https://anybuddy-full-stack-capstone.herokuapp.com/events/get/all/${userId}`,
+            url: `https://anybuddy-backend.onrender.com/events/get/all/${userId}`,
             dataType: 'json',
             contentType: 'application/json'
         })
@@ -464,7 +464,7 @@ function showJoinedEvents(userId) {
 
     $.ajax({
             type: 'GET',
-            url: `https://anybuddy-full-stack-capstone.herokuapp.com/events/get/all/joined/${userId}`,
+            url: `https://anybuddy-backend.onrender.com/events/get/all/joined/${userId}`,
             dataType: 'json',
             contentType: 'application/json'
         })
@@ -730,7 +730,7 @@ $(document).on('click', '.remove-my-event-button', function (event) {
 
     $.ajax({
             type: 'DELETE',
-            url: `https://anybuddy-full-stack-capstone.herokuapp.com/event/${eventId}`,
+            url: `https://anybuddy-backend.onrender.com/event/${eventId}`,
             dataType: 'json',
             contentType: 'application/json'
         })
@@ -761,7 +761,7 @@ $(document).on('click', '.remove-event-button', function (event) {
 
     $.ajax({
             type: 'PUT',
-            url: `https://anybuddy-full-stack-capstone.herokuapp.com/event/partner/remove/${eventInfo}/${userId}`,
+            url: `https://anybuddy-backend.onrender.com/event/partner/remove/${eventInfo}/${userId}`,
             dataType: 'json',
             data: JSON.stringify(editPartnerRequest),
             contentType: 'application/json'
@@ -807,7 +807,7 @@ $('.login-form').submit(function (event) {
         //make the api call using the payload above
         $.ajax({
                 type: 'POST',
-                url: 'https://anybuddy-full-stack-capstone.herokuapp.com/users/login',
+                url: 'https://anybuddy-backend.onrender.com/users/login',
                 dataType: 'json',
                 data: JSON.stringify(loginUserObject),
                 contentType: 'application/json'
@@ -860,7 +860,7 @@ $('.register-form').submit(function (event) {
         //make the api call using the payload above
         $.ajax({
                 type: 'POST',
-                url: 'https://anybuddy-full-stack-capstone.herokuapp.com/users/create',
+                url: 'https://anybuddy-backend.onrender.com/users/create',
                 dataType: 'json',
                 data: JSON.stringify(newUserObject),
                 contentType: 'application/json'
@@ -908,7 +908,7 @@ $(document).on('submit', '.request-join-form', function (event) {
     //console.log(JSON.stringify(newEventObject));
     $.ajax({
             type: 'PUT',
-            url: `https://anybuddy-full-stack-capstone.herokuapp.com/event/partner/add/${eventId}`,
+            url: `https://anybuddy-backend.onrender.com/event/partner/add/${eventId}`,
             dataType: 'json',
             data: JSON.stringify(newEventObject),
             contentType: 'application/json'
@@ -1004,7 +1004,7 @@ $('.create-event-form').submit(function (event) {
             //make the api call using the payload above
             $.ajax({
                     type: 'POST',
-                    url: 'https://anybuddy-full-stack-capstone.herokuapp.com/events/create',
+                    url: 'https://anybuddy-backend.onrender.com/events/create',
                     dataType: 'json',
                     data: JSON.stringify(newEventObject),
                     contentType: 'application/json'
@@ -1058,7 +1058,7 @@ $(document).on('submit', '.edit-event-form', function (event) {
     };
     $.ajax({
             type: 'PUT',
-            url: `https://anybuddy-full-stack-capstone.herokuapp.com/event/${eventId}`,
+            url: `https://anybuddy-backend.onrender.com/event/${eventId}`,
             dataType: 'json',
             data: JSON.stringify(editEventObject),
             contentType: 'application/json'
